@@ -1,0 +1,389 @@
+{
+  "name": "AMX80",
+  "vendorId": "0x1A86",
+  "productId": "0xFE80",
+    "matrix": {
+    "rows": 10,
+    "cols": 11
+  },
+  "customKeycodes": [
+    {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
+    {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
+    {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
+    {"name": "usb mode", "title": "usb mode", "shortName": "USB"},
+    {"name": "2.4G mode", "title": "2.4G mode", "shortName": "2.4G"},
+    {"name": "Close RGB", "title": "Close RGB", "shortName": "cRGB"},
+    {"name": "Open RGB", "title": "Open RGB", "shortName": "oRGB"},
+    {"name": "Reset", "title": "Reset", "shortName": "Rst"},
+    {"name": "Clean EEPROM", "title": "Clean EEPROM", "shortName": "cEE"},
+    {"name": "Update", "title": "Update", "shortName": "Upda"},
+    {"name": "Clean Wireless", "title": "Clean Wireless", "shortName": "cWi"},
+    {"name": "Light+", "title": "Light+", "shortName": "RGB+"},
+    {"name": "Light-", "title": "Light-", "shortName": "RGB-"},
+    {"name": "Magnetic Force +", "title": "Magnetic Force +", "shortName": "MF+"},
+    {"name": "Magnetic Force -", "title": "Magnetic Force -", "shortName": "MF-"},
+    {"name": "Actuation Point +", "title": "Actuation Point +", "shortName": "AP+"},
+    {"name": "Actuation Point -", "title": "Actuation Point -", "shortName": "AP-"}
+  ],
+  
+  "menus": [
+    {
+      "label": "Configurations",
+      "content": [
+        {
+          "label": "Wireless",
+          "content": [
+            {
+              "showIf": "{id_Work_mode} == 1",
+              "label": "BLE Device",
+              "type": "dropdown",
+              "options": [
+                ["Device 0", 0],
+                ["Device 1", 1],
+                ["Device 2", 2]
+              ],
+              "content": ["id_BLE_device", 0, 1]
+            },
+            {
+              "label": "Work Mode",
+              "type": "dropdown",
+              "options": [
+                ["USB", 0],
+                ["BlueTooth", 1],
+                ["RF 2.4G", 2]
+              ],
+              "content": ["id_Work_mode", 0, 2]
+            }
+          ]
+        },
+        {
+          "label": "RGBType",
+          "content": [
+            {
+              "label": "Style",
+              "type": "dropdown",
+              "options": [
+                ["OFF", 0],
+                ["Rainbow", 1],
+                ["Breath", 2],
+                ["Marquee", 3],
+                ["Solid", 4],
+                ["Cycle effect", 5],
+                ["Meteor effect", 6],
+                ["wave flow", 7],
+                ["ripple effect", 8],
+                ["starry night", 9],
+                ["flowing stream", 10],
+                ["follow me", 11],
+                ["layered waves", 12],
+                ["sine wave", 13],
+                ["color spring", 14],
+                ["gentle fade", 15],
+                ["flower garden", 16],
+                ["double effect", 17],
+                ["peak return", 18],
+                ["color cross", 19],
+                ["snow flurry", 20]
+              ],
+              "content": ["id_LED_Style", 1, 1]
+            },
+            {
+              "label": "RGBBrightness",
+              "type": "range",
+              "options": [1, 128],
+              "content": ["id_LED_Brightness", 1, 2]
+            },
+            {
+              "showIf": "{id_LED_Style} > 6",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 3],
+              "content": ["id_rgblight_speed", 1, 3]
+            },
+            {
+              "showIf": "{id_LED_Style} == 4",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_rgblight_color", 1, 4]
+            }
+          ]
+        },
+        {
+          "label": "Device settings",
+          "content": [
+            {
+              "label": "Reboot device",
+              "type": "button",
+              "options": [1],
+              "content": ["id_reset_button", 3, 1]
+            },
+            {
+              "label": "factory reset",
+              "type": "button",
+              "options": [1],
+              "content": ["id_reset_button", 3, 2]
+            },
+            {
+              "label": "upgrade mode",
+              "type": "button",
+              "options": [1],
+              "content": ["id_reset_button", 3, 3]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "layouts": {
+    "labels": [],
+    "keymap": [
+      [
+        {
+          "y": 1.75
+        },
+        "0,0",
+        {
+          "x": 0.5
+        },
+        "0,1",
+        "0,2",
+        "0,3",
+        {
+          "x": 0.75
+        },
+        "0,4",
+        "0,5",
+        {
+          "x": 10.25
+        },
+        "5,4",
+        "5,5",
+        {
+          "w": 2
+        },
+        "5,6",
+        {
+          "x": 0.75
+        },
+        "5,7",
+        "5,8",
+        "5,9"
+      ],
+      [
+        "1,1",
+        {
+          "x": 0.5
+        },
+        "1,2",
+        "1,3",
+        "1,4",
+        {
+          "x": 0.75,
+          "w": 1.5
+        },
+        "1,5",
+        "1,6",
+        {
+          "x": 9.25
+        },
+        "6,4",
+        "6,5",
+        "6,6",
+        {
+          "w": 1.5
+        },
+        "6,7",
+        {
+          "x": 0.75
+        },
+        "6,8",
+        "6,9",
+        "6,10"
+      ],
+      [
+        "2,1",
+        {
+          "x": 0.5
+        },
+        "2,2",
+        "2,3",
+        "2,4",
+        {
+          "x": 0.5,
+          "w": 1.75
+        },
+        "2,5",
+        "2,6",
+        {
+          "x": 9.75
+        },
+        "7,4",
+        "7,5",
+        {
+          "w": 2.25
+        },
+        "7,6"
+      ],
+      [
+        {
+          "x": 1.5
+        },
+        "3,2",
+        "3,3",
+        "3,4",
+        {
+          "x": 0.5,
+          "w": 1.75
+        },
+        "3,5",
+        "3,6",
+        {
+          "x": 9.75
+        },
+        "8,4",
+        "8,5",
+        {
+          "w": 2.25
+        },
+        "8,6",
+        {
+          "x": 1.5
+        },
+        "8,7"
+      ],
+      [
+        {
+          "x": 1.5
+        },
+        "4,4",
+        "4,5",
+        "4,6",
+        {
+          "x": 0.5,
+          "w": 1.25
+        },
+        "4,7",
+        {
+          "w": 1.25
+        },
+        "4,8",
+        {
+          "x": 10.75,
+          "w": 1.25
+        },
+        "9,2",
+        "9,3",
+        {
+          "w": 1.25
+        },
+        "9,4",
+        {
+          "x": 0.5
+        },
+        "9,5",
+        "9,6",
+        "9,7"
+      ],
+      [
+        {
+          "r": 12,
+          "y": -6.75,
+          "x": 7.75
+        },
+        "0,6",
+        "0,7",
+        "0,8",
+        "0,9",
+        "0,10"
+      ],
+      [
+        {
+          "x": 8.5
+        },
+        "1,7",
+        "1,8",
+        "1,9",
+        "1,10"
+      ],
+      [
+        {
+          "x": 8.75
+        },
+        "2,7",
+        "2,8",
+        "2,9",
+        "2,10"
+      ],
+      [
+        {
+          "x": 9
+        },
+        "3,7",
+        "3,8",
+        "3,9",
+        "3,10"
+      ],
+      [
+        {
+          "x": 9.5,
+          "w": 1.25
+        },
+        "4,9",
+        {
+          "w": 2.25
+        },
+        "4,10"
+      ],
+      [
+        {
+          "r": -12,
+          "y": -0.05,
+          "x": 12.25
+        },
+        "5,0",
+        "5,1",
+        "5,2",
+        "5,3"
+      ],
+      [
+        {
+          "x": 11.5
+        },
+        "6,0",
+        "6,1",
+        "6,2",
+        "6,3"
+      ],
+      [
+        {
+          "x": 11.75
+        },
+        "7,0",
+        "7,1",
+        "7,2",
+        "7,3"
+      ],
+      [
+        {
+          "x": 11.5
+        },
+        "8,0",
+        "8,1",
+        "8,2",
+        "8,3"
+      ],
+      [
+        {
+          "x": 11.5,
+          "w": 2.75
+        },
+        "9,0",
+        {
+          "w": 1.25
+        },
+        "9,1"
+      ]
+    ]
+  }
+}
