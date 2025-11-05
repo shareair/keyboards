@@ -109,6 +109,29 @@
               "content": ["id_rgblight_color", 1, 4]
             }
           ]
+        },
+        {
+          "label": "Device settings",
+          "content": [
+            {
+              "label": "Reboot device",
+              "type": "button",
+              "options": [1],
+              "content": ["id_reset_button", 3, 1]
+            },
+            {
+              "label": "factory reset",
+              "type": "button",
+              "options": [1],
+              "content": ["id_reset_button", 3, 2]
+            },
+            {
+              "label": "upgrade mode",
+              "type": "button",
+              "options": [1],
+              "content": ["id_reset_button", 3, 3]
+            }
+          ]
         }
       ]
     }
