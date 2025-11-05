@@ -88,7 +88,7 @@
                 ["snow flurry", 20]
               ],
               "content": ["id_LED_Style", 1, 1]
-            },
+            }, 
             {
               "label": "RGBBrightness",
               "type": "range",
