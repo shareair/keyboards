@@ -11,7 +11,7 @@
     {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
     {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
     {"name": "usb mode", "title": "usb mode", "shortName": "USB"},
-    {"name": "2.4G mode", "title": "2.4G mode", "shortName": "2.4G"},
+    {"name": "backup mode", "title": "backup mode", "shortName": "BCKM"},
     {"name": "Close RGB", "title": "Close RGB", "shortName": "cRGB"},
     {"name": "Open RGB", "title": "Open RGB", "shortName": "oRGB"},
     {"name": "Reset", "title": "Reset", "shortName": "Rst"},
@@ -48,8 +48,7 @@
               "type": "dropdown",
               "options": [
                 ["USB", 0],
-                ["BlueTooth", 1],
-                ["RF 2.4G", 2]
+                ["BlueTooth", 1]
               ],
               "content": ["id_Work_mode", 0, 2]
             }
@@ -87,6 +86,7 @@
               "content": ["id_LED_Style", 1, 1]
             },
             {
+              "showIf": "{id_LED_Style} > 0",
               "label": "Brightness",
               "type": "range",
               "options": [1, 255],
@@ -104,6 +104,12 @@
               "label": "Color",
               "type": "color",
               "content": ["id_rgblight_color", 1, 4]
+            },
+            {
+              "label": "Save data",
+              "type": "button",
+              "options": [1],
+              "content": ["id_saveRGB_button", 1, 5]
             }
           ]
         },
@@ -223,7 +229,28 @@
               "content": ["id_reset_button", 3, 3]
             }
           ]
+        },
+        {
+          "label": "Sleep settings",
+          "content": [
+            {
+              "label": "sleep time",
+              "type": "dropdown",
+              "options": [
+                ["5 minutes", 5],
+                ["10 minutes", 10],
+                ["15 minutes", 15],
+                ["25 minutes", 25],
+                ["35 minutes", 35],
+                ["40 minutes", 40],
+                ["45 minutes", 45],
+                ["60 minutes", 60]
+              ],
+              "content": ["id_sleeptime_device", 4, 1]
+            }
+          ]
         }
+
       ]
     }
   ],
