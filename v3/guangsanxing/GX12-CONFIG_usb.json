@@ -110,6 +110,26 @@
               "content": ["id_reset_button", 3, 3]
             }
           ]
+        },
+        {
+          "label": "Sleep settings",
+          "content": [
+            {
+              "label": "sleep time",
+              "type": "dropdown",
+              "options": [
+                ["5 minutes", 5],
+                ["10 minutes", 10],
+                ["15 minutes", 15],
+                ["25 minutes", 25],
+                ["35 minutes", 35],
+                ["40 minutes", 40],
+                ["45 minutes", 45],
+                ["60 minutes", 60]
+              ],
+              "content": ["id_sleeptime_device", 4, 1]
+            }
+          ]
         }
       ]
     }
