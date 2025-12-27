@@ -7,10 +7,10 @@
     "cols": 5
   },
   "customKeycodes": [
-    {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
-    {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
-    {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
-    {"name": "usb mode", "title": "usb mode", "shortName": "USB"},
+    {"name": "bt1", "title": "bt1", "shortName": "bt1"},
+    {"name": "bt2", "title": "bt2", "shortName": "bt2"},
+    {"name": "bt3", "title": "bt3", "shortName": "bt3"},
+    {"name": "backup mode", "title": "backup mode", "shortName": "BCKM"},
     {"name": "backup mode", "title": "backup mode", "shortName": "BCKM"},
     {"name": "Close RGB", "title": "Close RGB", "shortName": "cRGB"},
     {"name": "Open RGB", "title": "Open RGB", "shortName": "oRGB"},
@@ -37,20 +37,11 @@
               "label": "BLE Device",
               "type": "dropdown",
               "options": [
-                ["Device 0", 0],
-                ["Device 1", 1],
-                ["Device 2", 2]
+                ["bt1", 0],
+                ["bt2", 1],
+                ["bt3", 2]
               ],
               "content": ["id_BLE_device", 0, 1]
-            },
-            {
-              "label": "Work Mode",
-              "type": "dropdown",
-              "options": [
-                ["USB", 0],
-                ["BlueTooth", 1]
-              ],
-              "content": ["id_Work_mode", 0, 2]
             }
           ]
         },
