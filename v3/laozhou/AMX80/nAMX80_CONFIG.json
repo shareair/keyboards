@@ -7,9 +7,9 @@
     "cols": 11
   },
   "customKeycodes": [
-    {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
-    {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
-    {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
+    {"name": "bt1", "title": "bt1", "shortName": "bt1"},
+    {"name": "bt2", "title": "bt2", "shortName": "bt2"},
+    {"name": "bt3", "title": "bt3", "shortName": "bt3"},
     {"name": "usb mode", "title": "usb mode", "shortName": "USB"},
     {"name": "2.4G mode", "title": "2.4G mode", "shortName": "2.4G"},
     {"name": "Close RGB", "title": "Close RGB", "shortName": "cRGB"},
@@ -38,9 +38,9 @@
               "label": "BLE Device",
               "type": "dropdown",
               "options": [
-                ["Device 0", 0],
-                ["Device 1", 1],
-                ["Device 2", 2]
+                ["bt1", 0],
+                ["bt2", 1],
+                ["bt3", 2]
               ],
               "content": ["id_BLE_device", 0, 1]
             },
@@ -128,6 +128,26 @@
               "type": "button",
               "options": [1],
               "content": ["id_reset_button", 3, 3]
+            }
+          ]
+        },
+        {
+          "label": "Sleep settings",
+          "content": [
+            {
+              "label": "sleep time",
+              "type": "dropdown",
+              "options": [
+                ["5 minutes", 5],
+                ["10 minutes", 10],
+                ["15 minutes", 15],
+                ["25 minutes", 25],
+                ["35 minutes", 35],
+                ["40 minutes", 40],
+                ["45 minutes", 45],
+                ["60 minutes", 60]
+              ],
+              "content": ["id_sleeptime_device", 4, 1]
             }
           ]
         }

@@ -33,7 +33,6 @@
           "label": "Wireless",
           "content": [
             {
-              "showIf": "{id_Work_mode} == 1",
               "label": "BLE Device",
               "type": "dropdown",
               "options": [
