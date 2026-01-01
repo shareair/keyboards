@@ -36,9 +36,9 @@
               "label": "BLE Device",
               "type": "dropdown",
               "options": [
-                ["bt1", 0],
-                ["bt2", 1],
-                ["bt3", 2]
+                ["bt1", 1],
+                ["bt2", 2],
+                ["bt3", 3]
               ],
               "content": ["id_BLE_device", 0, 1]
             }
