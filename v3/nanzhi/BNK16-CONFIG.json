@@ -234,7 +234,8 @@
                 ["35 minutes", 35],
                 ["40 minutes", 40],
                 ["45 minutes", 45],
-                ["60 minutes", 60]
+                ["60 minutes", 60],
+                ["never", 255]
               ],
               "content": ["id_sleeptime_device", 4, 1]
             }
